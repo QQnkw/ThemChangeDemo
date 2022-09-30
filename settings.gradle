@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "ThemChangeDemo"
 include ':app'
 include ':them-change-lib'
+include ':them-skin'
+include ':them-language'

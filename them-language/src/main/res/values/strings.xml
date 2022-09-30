@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ThemLanguage</string>
+    <string name="load_skin">Load Skin</string>
+    <string name="load_font">Load Font</string>
+    <string name="load_language">Load Language</string>
+    <string name="text_1">Language App Text-->One</string>
+    <string name="text_2">Language App Text-->Two</string>
+    <string name="text_3">Language App Text-->Three</string>
+    <string name="text_4">Language App Text-->Four</string>
+    <string name="text_5">Language App Text-->Five</string>
+    <string name="text_6">Language App Text-->Six</string>
+    <string name="text_7">Language App Text-->Seven</string>
+    <string name="text_8">Language App Text-->Eight</string>
+    <string name="text_9">Language App Text-->Nine</string>
+</resources>

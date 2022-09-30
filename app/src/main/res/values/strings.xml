@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ThemChangeDemo</string>
+    <string name="load_skin">加载皮肤</string>
+    <string name="load_font">加载字体</string>
+    <string name="load_language">加载多语言</string>
+    <string name="text_1">应用自带文本-->1</string>
+    <string name="text_2">应用自带文本-->2</string>
+    <string name="text_3">应用自带文本-->3</string>
+    <string name="text_4">应用自带文本-->4</string>
+    <string name="text_5">应用自带文本-->5</string>
+    <string name="text_6">应用自带文本-->6</string>
+    <string name="text_7">应用自带文本-->7</string>
+    <string name="text_8">应用自带文本-->8</string>
+    <string name="text_9">应用自带文本-->9</string>
 </resources>
