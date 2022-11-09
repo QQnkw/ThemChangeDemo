@@ -16,21 +16,20 @@ public class AttrHelper {
     private AttrHelper() {
     }
 
-    private static int getColor(Resources resources, String resName, String packageName) {
-        int trueColor;
+    private static Integer getColor(Resources resources, String resName, String packageName) {
+        Integer trueColor;
         try {
             int trueResId = resources.getIdentifier(resName, "color", packageName);
             trueColor = resources.getColor(trueResId);
         } catch (Exception e) {
-            trueColor = -1;
+            trueColor = null;
             Log.d(TAG, "getColor-->Exception");
         }
-
         return trueColor;
     }
 
     public static int getExternalColor(Context context, int sourceResId) {
-        int color = -1;
+        Integer color = -1;
         try {
             //R.color.white
             //type是color
@@ -42,14 +41,14 @@ public class AttrHelper {
                 color = getColor(SkinResourcesHelper.getInstance().mSkinResources, name, SkinResourcesHelper.getInstance().mSkinPackageName);
                 Log.d(TAG, "getExternalColor-->mSkinResources:color is " + color);
             }
-            if (color == -1) {
+            if (color == null) {
                 color = context.getResources().getColor(sourceResId);
                 Log.d(TAG, "getExternalColor-->sourceResId:color is " + color);
             }
         } catch (Exception e) {
             Log.d(TAG, "getExternalColor-->Exception");
         }
-        return color;
+        return color == null ? -1 : color;
     }
 
     /*------------------------------------------------------------------*/
@@ -211,9 +210,9 @@ public class AttrHelper {
             String packageName = applicationInfo.packageName;
             Log.d(TAG, "getExternalAppIcon-->mSkinResources:packageName:" + packageName);
             String[] arr = packageName.split("\\.");
-            Log.d(TAG,"getExternalAppIcon-->arr:" + Arrays.toString(arr));
+            Log.d(TAG, "getExternalAppIcon-->arr:" + Arrays.toString(arr));
             int index = arr.length - 1;
-            Log.d(TAG,"getExternalAppIcon-->index:" + index);
+            Log.d(TAG, "getExternalAppIcon-->index:" + index);
             String iconName = arr[index];
             Log.d(TAG, "getExternalAppIcon-->iconName:" + iconName);
             if (SkinResourcesHelper.getInstance().mSkinResources != null) {
@@ -225,7 +224,7 @@ public class AttrHelper {
                 Log.d(TAG, "getExternalAppIcon-->source:drawable is null " + (drawable == null));
             }
         } catch (Exception e) {
-            Log.d(TAG, "getExternalAppIcon-->Exception",e);
+            Log.d(TAG, "getExternalAppIcon-->Exception", e);
         }
         return drawable;
     }

@@ -78,11 +78,9 @@ public class AttrApplyHelper {
                 if (AttrFactory.BACKGROUND.equals(attrName)) {
                     //背景颜色
                     if (RES_TYPE_NAME_COLOR.equals(attrValueTypeName)) {
+                        Log.d(TAG, "applySkin-->BACKGROUND:RES_TYPE_NAME_COLOR");
                         int color = AttrHelper.getExternalColor(context, refId);
-                        if (color != -1) {
-                            Log.d(TAG, "applySkin-->BACKGROUND:RES_TYPE_NAME_COLOR");
-                            view.setBackgroundColor(color);
-                        }
+                        view.setBackgroundColor(color);
                     } else if (RES_TYPE_NAME_DRAWABLE.equals(attrValueTypeName) || RES_TYPE_NAME_MIPMAP.equals(attrValueTypeName)) {
                         Drawable drawable = AttrHelper.getExternalDrawable(context, refId);
                         if (drawable != null) {
@@ -98,13 +96,13 @@ public class AttrApplyHelper {
                         TextView tv = (TextView) view;
                         tv.setTextColor(colorStateList);
                     }
-                }  else if (AttrFactory.SRC.equals(attrName)) {
+                } else if (AttrFactory.SRC.equals(attrName)) {
                     //图片引用
                     if (RES_TYPE_NAME_COLOR.equals(attrValueTypeName)) {
-                        int color = AttrHelper.getExternalColor(context, refId);
-                        if (color != -1 && view instanceof ImageView) {
+                        if (view instanceof ImageView) {
                             Log.d(TAG, "applySkin-->SRC:RES_TYPE_NAME_COLOR");
                             ImageView iv = (ImageView) view;
+                            int color = AttrHelper.getExternalColor(context, refId);
                             ColorDrawable colorDrawable = new ColorDrawable(color);
                             iv.setImageDrawable(colorDrawable);
                         }
@@ -138,7 +136,7 @@ public class AttrApplyHelper {
                         TextView tv = (TextView) view;
                         tv.setTextColor(colorStateList);
                     }
-                }  else if (AttrFactory.SRC.equals(attrName)) {
+                } else if (AttrFactory.SRC.equals(attrName)) {
                     //图片引用
                     if (view instanceof ImageView) {
                         ImageView iv = (ImageView) view;
@@ -168,7 +166,7 @@ public class AttrApplyHelper {
     }
 
     private void applyLanguage(TextView textView, SkinAttr attr, Context context) {
-        CharSequence text = AttrHelper.getExternalString(context,attr.attrValueRefId);
+        CharSequence text = AttrHelper.getExternalString(context, attr.attrValueRefId);
         if (text != null) {
             textView.setText(text);
         }
