@@ -139,3 +139,13 @@ class MainActivity : BaseActivity() {}
 ##### 皮肤包和多语言包中的资源名称必须和目标应用中需要更换的资源文件名称一致;否则找不到
 
 ### 把项目中的ThemBlack.skin和ThemLanguage.skin以及msz_regular.ttf文件放置到SD卡根目录,运行demo,就可以看到效果
+
+### 主项目资源截图
+![](https://github.com/QQnkw/ThemChangeDemo/blob/master/%E4%B8%BB%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90.png)
+![](https://github.com/QQnkw/ThemChangeDemo/blob/master/%E4%B8%BB%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%87%E5%AD%97%E8%B5%84%E6%BA%90.png)
+![](https://github.com/QQnkw/ThemChangeDemo/blob/master/%E4%B8%BB%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%A2%9C%E8%89%B2%E8%B5%84%E6%BA%90.png)
+### 皮肤包资源截图
+![](https://github.com/QQnkw/ThemChangeDemo/blob/master/%E7%9A%AE%E8%82%A4%E5%8C%85%E7%9A%84%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90.png)
+![](https://github.com/QQnkw/ThemChangeDemo/blob/master/%E7%9A%AE%E8%82%A4%E5%8C%85%E7%9A%84%E9%A2%9C%E8%89%B2%E8%B5%84%E6%BA%90.png)
+### 语言包资源截图
+![](https://github.com/QQnkw/ThemChangeDemo/blob/master/%E8%AF%AD%E8%A8%80%E5%8C%85%E7%9A%84%E6%96%87%E5%AD%97%E8%B5%84%E6%BA%90.png)
